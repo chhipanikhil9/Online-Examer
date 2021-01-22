@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+	<form autocomplete="off" method="post" action='./index.php'>
+		<fieldset class="fs">
+			<input type="text" title="Userid" placeholder="Userid" name="userid">
+			<br>
+			<input type="Password" title="Password" placeholder="Password" name="pswrd">
+			<br>
+			<button class="btn effect1">Log in</button>
+			<br><br>
+			<center><span class='registration'>Not registered? Register <a href="./signup.html">here</a></span></center>
+		</fieldset>
+	</form>
+</body>
+</html>
+<style type="text/css">
+	html{
+		background-image: url(images/background.jpg);
+		background-repeat: no-repeat;
+  		background-size: auto;
+  		background-position: absolute;
+  		background-size: 100% 100%;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 20px;
+		overflow: hidden;
+	}
+
+	body{
+		width: 100vw;
+		height: 100vh;
+		margin: 0;
+		padding: 0;
+	}
+	input{
+		background-color:transparent;
+		width: 100%;
+		z-index: 3;
+		padding: 5px;
+		font-size: 15px;
+		margin-bottom: 15px;
+		transition: 1s;
+		border: none;
+		outline: none;
+		border-bottom-style: solid;
+		border-bottom-width: 1px;
+	}
+	input:focus{
+		border-bottom-color: #3498db;
+	}
+	input::placeholder{
+		color: #444444;
+	}
+	.fs{
+		background-color: rgb(105,105,105,0.8);
+		padding: 100px;
+		border-radius: 100%;
+		min-width: 250px;
+	}
+	form{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	.registration{
+		font-size: 15px;
+	}
+
+	.btn{
+		left: 50%;
+		transform: translate(-60%, 0%);
+		border: 2px solid #3498db;
+		background: none;
+		padding: 10px 20px;
+		font-size: 20px;
+		font-family: "montserrat";
+		cursor: pointer;
+		margin: 10px;
+		z-index: 1;
+		transition: 0.8s;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.effect1{
+		color: black;
+		box-shadow: none;
+	}
+
+	.effect1:hover{
+		box-shadow: 5px 10px 8px #888888;
+	}
+
+	.btn::before{
+		content:"";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		background: #3598db;
+		z-index:-1;
+		transform: translate(-50%,-50%);
+		transition: all 0.8s ease;
+	}
+
+	.effect1::before{
+		width: 200%;
+		height: 0;
+		transform: translate(-50%,-50%) rotate(0deg);
+	}
+
+	.effect1:hover::before{
+		height: 280%;
+		transform: translate(-50%,-50%) rotate(90deg);
+	}
+	@media screen and (max-width: 720px) {
+  		.fs{
+			padding: 50px;
+			border-radius: 10%;
+			min-width: 200px;
+		}
+	}
+</style>
